@@ -2,7 +2,7 @@
 
 const $ = id => document.getElementById(id);
 const state = { actor: "planner_a", plan: null, generation: 0, sourceOpener: null,
-  sourceGeneration: null, loading: false };
+  sourceGeneration: null, sourceRequestId: 0, loading: false };
 const labels = {
   planning_candidate: "계획 자료 후보",
   outside_period: "기간 외 자료",
@@ -60,6 +60,7 @@ function sourceButton(id, text) {
 }
 async function openSource(docId, opener) {
   const generation = state.generation;
+  const requestId = ++state.sourceRequestId;
   state.sourceOpener = opener;
   state.sourceGeneration = generation;
   $("sourceTitle").textContent = "원문 · " + docId;
@@ -69,11 +70,13 @@ async function openSource(docId, opener) {
   try {
     const response = await api("/api/source/" + encodeURIComponent(docId) + "?" + query());
     const data = await response.json();
-    if (generation !== state.generation || !$("sourceDialog").open) return;
+    if (generation !== state.generation || requestId !== state.sourceRequestId ||
+        !$("sourceDialog").open) return;
     $("sourceStatus").textContent = "원본 필드 · 출처 해시 · 자료 가용 시각";
     $("sourceText").textContent = JSON.stringify(data, null, 2);
   } catch (error) {
-    if (generation !== state.generation || !$("sourceDialog").open) return;
+    if (generation !== state.generation || requestId !== state.sourceRequestId ||
+        !$("sourceDialog").open) return;
     $("sourceStatus").textContent = "원문 확인 실패: " + error.message;
     $("sourceText").textContent = "권한·가용 시각을 다시 확인해 주세요.";
   }
@@ -186,6 +189,7 @@ function clearWorkspace() {
 }
 async function loadPlan() {
   const generation = ++state.generation;
+  $("reviewNote").value = "";
   if ($("sourceDialog").open) $("sourceDialog").close();
   clearWorkspace();
   $("planState").textContent = "자료 확인 중";
@@ -211,8 +215,9 @@ async function loadPlan() {
     status("자료 조회 실패: " + error.message, true);
   }
 }
-async function loadMeta() {
+async function loadMeta(previousContext = null) {
   const generation = ++state.generation;
+  $("reviewNote").value = "";
   clearWorkspace();
   if ($("sourceDialog").open) $("sourceDialog").close();
   status("역할별 허용 범위를 확인 중입니다.");
@@ -224,6 +229,13 @@ async function loadMeta() {
     setOptions($("service"), meta.services, value => value);
     setOptions($("period"), meta.periods, value => value + "월");
     setOptions($("cutoff"), meta.cutoffs, value => value.slice(0, 16).replace("T", " ") + " UTC");
+    if (previousContext) {
+      for (const id of ["service", "period", "cutoff"]) {
+        if ([...$(id).options].some(option => option.value === previousContext[id])) {
+          $(id).value = previousContext[id];
+        }
+      }
+    }
     await loadPlan();
   } catch (error) {
     if (generation !== state.generation) return;
@@ -277,11 +289,16 @@ async function exportReceipt(id, button) {
   } finally { if (generation === state.generation) button.disabled = false; }
 }
 
-$("actor").addEventListener("change", () => { state.actor = $("actor").value; loadMeta(); });
+$("actor").addEventListener("change", () => {
+  const previousContext = context();
+  state.actor = $("actor").value;
+  loadMeta(previousContext);
+});
 for (const id of ["service", "period", "cutoff"]) $(id).addEventListener("change", loadPlan);
 $("reviewButton").addEventListener("click", reviewPlan);
 $("sourceClose").addEventListener("click", () => $("sourceDialog").close());
 $("sourceDialog").addEventListener("close", () => {
+  ++state.sourceRequestId;
   if (state.sourceOpener && state.sourceOpener.isConnected &&
       state.sourceGeneration === state.generation) state.sourceOpener.focus();
   state.sourceOpener = null;

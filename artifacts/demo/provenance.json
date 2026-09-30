@@ -1,0 +1,76 @@
+{
+  "capture": "Google Chrome headless, real loopback P15 UI, frozen fictional sources",
+  "reference": "P09 v2 development screenshot",
+  "reference_url": "https://github.com/Kimhyuntae9665/maintenance-job-plan-draft-review/blob/main/artifacts/media/v2-development-stored-desktop.png",
+  "model_calls": 0,
+  "browser_check_count": 10,
+  "browser_checks": [
+    "early cutoff: v1 policy, 4 rows, 3 requests, no future R2",
+    "keyboard source dialog: exact v1 source and focus return",
+    "review/export: exact current receipt and unassessed result",
+    "later cutoff: R2 selected, 2 requests, prior review absent",
+    "return to early cutoff: no future R2; scoped receipt restored",
+    "viewer cannot submit review",
+    "390px mobile matrix/source: no document overflow",
+    "delayed A source cannot replace later B title/body/hash",
+    "cutoff change clears unbound review draft",
+    "role change preserves valid July/later filters and clears review draft"
+  ],
+  "media": [
+    {
+      "path": "artifacts/demo/01-desktop-august-matrix.png",
+      "size_bytes": 143864,
+      "sha256": "238ec9ba743ca857efcfe3ba7dcdc39e9a2e875e2605c0e17c3c3ca337a72416"
+    },
+    {
+      "path": "artifacts/demo/02-policy-source-drawer.png",
+      "size_bytes": 122684,
+      "sha256": "e9174ec1fc6a7a77869d89e5587c8944896157fe050dd1334f0e5b9e7ba843c2"
+    },
+    {
+      "path": "artifacts/demo/03-backup-not-restore.png",
+      "size_bytes": 124203,
+      "sha256": "4c76b3169b8c0e093d4eb5dd55e17e70d7848fc76a3f22818b279a11f9ad38df"
+    },
+    {
+      "path": "artifacts/demo/04-reviewed-plan-history.png",
+      "size_bytes": 122084,
+      "sha256": "0624f2a3108c81e9d050d860cde5b973a727f882d6e6176d560b8ef098a5de26"
+    },
+    {
+      "path": "artifacts/demo/05-later-revision-stale-review.png",
+      "size_bytes": 101655,
+      "sha256": "f0d5a5aab1285bb694aa93d3c9ad438a7a4b760661b671745e1f2209bb22218c"
+    },
+    {
+      "path": "artifacts/demo/06-return-early-history.png",
+      "size_bytes": 122088,
+      "sha256": "04b0b61ae6838f5f7cdd63388829c1414f66be09e8c8396046ef9ea0cc5af1d3"
+    },
+    {
+      "path": "artifacts/demo/07-readonly-role.png",
+      "size_bytes": 112156,
+      "sha256": "f7c311469d1d657371f9abd423112e5931bf3afae900d82e6dfd62e0c018df6e"
+    },
+    {
+      "path": "artifacts/demo/08-mobile-390-matrix.png",
+      "size_bytes": 278913,
+      "sha256": "9e4a90da8bc0eb5e0f7f0f17e54dfe99545d03d399dbc608d16fa90fad75b4a6"
+    },
+    {
+      "path": "artifacts/demo/09-mobile-source.png",
+      "size_bytes": 45426,
+      "sha256": "5c96594bb0b01794e7efc674a0529cd458394b2d91ac62961ce99fea554c5fcd"
+    },
+    {
+      "path": "artifacts/demo/10-july-period.png",
+      "size_bytes": 143286,
+      "sha256": "827d67166ab103b5ed2d5b1e0b640fd45b81f45ba2977615bf021643fcac7bfc"
+    },
+    {
+      "path": "artifacts/demo/workflow.mp4",
+      "size_bytes": 349928,
+      "sha256": "889d005b15a9e55945e5a31fa113a20f07b954212881afc40697545ac091b019"
+    }
+  ]
+}

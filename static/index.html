@@ -9,20 +9,17 @@
 </head>
 <body>
 <header class="top">
-  <div>
-    <p class="eyebrow">AX LAB · 합성 업무 재현</p>
-    <h1>공장 IT 감사 계획 매트릭스</h1>
-    <p class="sub">정책 적용성·자료 종류·완전성을 분리해 검토합니다. 통제 효과와 감사 결과는 미평가입니다.</p>
-  </div>
+  <h1>공장 IT 감사 계획</h1>
+  <p class="sub">정책과 증거를 대조하는 합성 계획 화면 · 통제 효과는 미평가</p>
+</header>
+
+<section class="scope" aria-labelledby="scope-title">
+  <div class="scope-heading"><h2 id="scope-title">검토 범위</h2><p id="siteLabel" class="micro">자료 불러오는 중</p></div>
   <div class="actor-box">
     <label for="actor">데모 역할</label>
     <select id="actor"><option value="planner_a">PLANT-A 계획 검토자</option><option value="viewer_a">PLANT-A 읽기 전용</option></select>
     <span class="micro">데모 역할 전환은 SSO가 아닙니다.</span>
   </div>
-</header>
-
-<section class="scope" aria-labelledby="scope-title">
-  <div><h2 id="scope-title">검토 범위</h2><p id="siteLabel" class="micro">자료 불러오는 중</p></div>
   <label>서비스 <select id="service"></select></label>
   <label>감사 기간 <select id="period"></select></label>
   <label>자료 가용 기준 <select id="cutoff"></select></label>
@@ -34,7 +31,7 @@
 <main class="workspace">
   <section class="matrix-panel" aria-labelledby="matrix-title">
     <div class="section-head">
-      <div><p class="eyebrow">01 · 정책 × 증거</p><h2 id="matrix-title">통제별 계획 매트릭스</h2></div>
+      <div><h2 id="matrix-title">통제별 계획 매트릭스</h2></div>
       <span class="pill neutral">효과성 미평가</span>
     </div>
     <p class="section-help">일치 후보는 검토할 자료를 가리킵니다. 충분성·효과성 판단은 포함하지 않습니다.</p>
@@ -48,11 +45,11 @@
 
   <aside class="side">
     <section class="card" aria-labelledby="request-title">
-      <div class="section-head"><div><p class="eyebrow">02 · 미해결</p><h2 id="request-title">증거 요청 큐</h2></div><strong id="requestCount" class="count">—</strong></div>
+      <div class="section-head"><div><h2 id="request-title">증거 요청 큐</h2></div><strong id="requestCount" class="count">—</strong></div>
       <ul id="requestList" class="request-list"></ul>
     </section>
     <section class="card" aria-labelledby="review-title">
-      <p class="eyebrow">03 · 사람 검토</p><h2 id="review-title">계획 검토 기록</h2>
+      <h2 id="review-title">계획 검토 기록</h2>
       <p class="section-help">요청이 남아 있어도 계획을 검토한 사실만 기록할 수 있습니다. 감사 통과·통제 효과를 승인하지 않습니다.</p>
       <label for="reviewNote">검토 메모</label>
       <textarea id="reviewNote" rows="3" maxlength="300" placeholder="예: 미해결 증거 요청 3건을 담당자에게 확인"></textarea>

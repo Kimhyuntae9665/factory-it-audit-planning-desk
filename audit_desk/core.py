@@ -116,6 +116,7 @@ class Desk:
 
     def plan(self, actor_id, service, period="2026-08", cutoff=CUTOFFS[0]):
         actor, (start, end), cutoff_dt = self._context(actor_id, service, period, cutoff)
+        month_label = str(int(period[-2:])) + "월"
         policy_docs = self._admitted(self.policies, actor["site"], service, cutoff_dt)
         evidence_docs = self._admitted(self.evidence, actor["site"], service, cutoff_dt)
         current, conflicts = self._current_evidence(evidence_docs)
@@ -155,10 +156,10 @@ class Desk:
                                  "question": "해당 기간에 승인되어 적용되는 정책 판본을 확인해 주세요."})
             elif not any(c["planning_state"] == "planning_candidate" for c in candidates):
                 questions = {
-                    "ACCESS-01": "8월 특권 계정 검토의 검토자 역할·검토일·계정 목록 판본을 요청합니다.",
-                    "RESTORE-01": "8월 복원 연습일과 문서화된 결과를 요청합니다. 백업 완료 요약은 다른 자료입니다.",
+                    "ACCESS-01": f"{month_label} 특권 계정 검토의 검토자 역할·검토일·계정 목록 판본을 요청합니다.",
+                    "RESTORE-01": f"{month_label} 복원 연습일과 문서화된 결과를 요청합니다. 백업 완료 요약은 다른 자료입니다.",
                     "CHANGE-01": "계획 변경이 실제 구현됐는지 확인하고, 구현됐다면 변경 요청·승인·구현 기록을 요청합니다.",
-                    "INVENTORY-01": "8월 서비스 전체 범위의 구성요소 내보내기와 범위·완전성 선언을 요청합니다."}
+                    "INVENTORY-01": f"{month_label} 서비스 전체 범위의 구성요소 내보내기와 범위·완전성 선언을 요청합니다."}
                 requests.append({"control_id": control_id, "reason_code": "planning_evidence_gap",
                                  "question": questions[control_id]})
             alternatives = [

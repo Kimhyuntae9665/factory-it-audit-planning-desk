@@ -33,21 +33,22 @@ The approved ACCESS-01 v2 starts **1 September** and draft v3 does not govern Au
 4. Review the open requests, write a note, and choose **검토한 계획 기록**. This records review of the planning packet only.
 5. Download the bound JSON from the current receipt. A changed source, scope, cutoff or withdrawal makes that receipt stale for export.
 
-## Actual running UI
+## 실제 실행 화면
 
-All images below were captured from the loopback app in headless Chrome against the frozen fictional fixture; they are not mockups or edited success states. The [workflow video](artifacts/demo/workflow.mp4) records the same browser run. The capture script and machine-readable checks are included.
+아래 화면은 고정한 가상 자료로 loopback 앱을 실제 Chrome에서 실행해 캡처했습니다. 합성 성공 화면이나 보정 이미지는 아닙니다. [작동 영상](artifacts/demo/workflow.mp4)은 같은 브라우저 실행을 기록합니다. 캡처 검사와 파일 해시는 [증거 명세](artifacts/demo/provenance.json)에 있습니다. 현재 UI는 [P09 v2 개발 화면](https://github.com/Kimhyuntae9665/maintenance-job-plan-draft-review/blob/main/artifacts/media/v2-development-stored-desktop.png)의 색상·타이포·두 패널 구성을 기준으로 정리했습니다.
 
-| View | Screenshot |
+| 업무 순서 | 실제 화면 |
 |---|---|
-| August matrix | ![August planning matrix](artifacts/demo/01-desktop-august-matrix.png) |
-| Policy source drawer | ![Policy source drawer](artifacts/demo/02-policy-source-drawer.png) |
-| Backup versus restore mismatch | ![Backup not restore](artifacts/demo/03-backup-not-restore.png) |
-| Human review receipt | ![Reviewed planning history](artifacts/demo/04-reviewed-plan-history.png) |
-| Later inventory revision | ![Later revision](artifacts/demo/05-later-revision-stale-review.png) |
-| Earlier cutoff restored | ![Early cutoff history](artifacts/demo/06-return-early-history.png) |
-| Read-only demo role | ![Read-only role](artifacts/demo/07-readonly-role.png) |
-| Mobile 390 px matrix | ![Mobile planning matrix](artifacts/demo/08-mobile-390-matrix.png) |
-| Mobile source drawer | ![Mobile source](artifacts/demo/09-mobile-source.png) |
+| 1. 감사 범위와 계획 매트릭스 | ![8월 계획 매트릭스](artifacts/demo/01-desktop-august-matrix.png) |
+| 2. 적용 정책의 원문 | ![정책 원문](artifacts/demo/02-policy-source-drawer.png) |
+| 3. 백업 자료와 복원 증거 구분 | ![자료 종류 불일치](artifacts/demo/03-backup-not-restore.png) |
+| 4. 사람의 계획 검토 기록 | ![계획 검토 이력](artifacts/demo/04-reviewed-plan-history.png) |
+| 5. 늦게 가용해진 자료 판본 | ![가용 기준 변경](artifacts/demo/05-later-revision-stale-review.png) |
+| 6. 이전 시점으로 복귀 | ![이전 기준 이력](artifacts/demo/06-return-early-history.png) |
+| 7. 읽기 전용 데모 역할 | ![읽기 전용 역할](artifacts/demo/07-readonly-role.png) |
+| 8. 모바일 매트릭스 | ![390px 모바일 매트릭스](artifacts/demo/08-mobile-390-matrix.png) |
+| 9. 모바일 원문 확인 | ![390px 모바일 원문](artifacts/demo/09-mobile-source.png) |
+| 10. 7월 감사 기간 질문 | ![7월 질문 문구](artifacts/demo/10-july-period.png) |
 
 ## Run locally
 
@@ -76,7 +77,7 @@ The app uses **deterministic rules only**. It makes **zero LLM calls**; no model
 
 ## Verification and limits
 
-The development suite has **18 passing tests** covering fixture integrity, policy boundaries, evidence type/period/completeness, ACL projection, conflicting revisions, stale review/export and native HTTP behavior. The actual Chrome run checked seven browser workflows on desktop and 390 px mobile; the receipt is in `artifacts/demo/browser-checks.json`. These are engineering checks on a small hand-authored fictional corpus, not an independent model-quality benchmark or an audit-control test. The browser capture is a single run; it does not establish compatibility with every browser or assistive technology.
+The development suite has **19 passing tests** covering fixture integrity, policy boundaries including July wording, evidence type/period/completeness, ACL projection, conflicting revisions, stale review/export and native HTTP behavior. The actual Chrome run checked ten browser workflows on desktop and 390 px mobile, including delayed source responses, draft reset and preserved filters; the receipt is in `artifacts/demo/browser-checks.json`. These are engineering checks on a small hand-authored fictional corpus, not an independent model-quality benchmark or an audit-control test. The browser capture is a single run; it does not establish compatibility with every browser or assistive technology.
 
 Potential extensions require a separate contract: authenticated roles, durable append-only receipt storage, evidence-owner integrations, reviewer workflows and validated control-testing logic. None is implied by the current UI.
 

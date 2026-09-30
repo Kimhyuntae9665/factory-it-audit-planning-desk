@@ -30,6 +30,19 @@ class PlanningTests(unittest.TestCase):
         self.assertTrue(all(r["assessment_result"] == "unassessed" for r in plan["rows"]))
         self.assertEqual(plan["assessment_result"], "unassessed")
 
+    def test_july_evidence_request_questions_use_selected_period(self):
+        july = self.desk.plan("planner_a", "MES-REPORT-A", "2026-07", EARLY)
+        august = self.plan()
+        for control in ("RESTORE-01", "INVENTORY-01"):
+            july_question = next(r["question"] for r in july["requests"]
+                                 if r["control_id"] == control)
+            august_question = next(r["question"] for r in august["requests"]
+                                   if r["control_id"] == control)
+            self.assertIn("7월", july_question)
+            self.assertNotIn("8월", july_question)
+            self.assertIn("8월", august_question)
+        self.assertEqual(july["assessment_result"], "unassessed")
+
     def test_period_type_completeness_and_requests_stay_separate(self):
         plan = self.plan()
         access = self.row(plan, "ACCESS-01")

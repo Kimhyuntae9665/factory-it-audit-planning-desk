@@ -9,7 +9,10 @@
     "later cutoff: R2 selected, 2 requests, prior review absent",
     "return to early cutoff: no future R2; scoped receipt restored",
     "viewer cannot submit review",
-    "390px mobile matrix/source: no document overflow"
+    "390px mobile matrix/source: no document overflow",
+    "delayed A source cannot replace later B title/body/hash",
+    "cutoff change clears unbound review draft",
+    "role change preserves valid July/later filters and clears review draft"
   ],
   "screenshots": [
     "01-desktop-august-matrix.png",
@@ -20,8 +23,9 @@
     "06-return-early-history.png",
     "07-readonly-role.png",
     "08-mobile-390-matrix.png",
-    "09-mobile-source.png"
+    "09-mobile-source.png",
+    "10-july-period.png"
   ],
   "video": "workflow.mp4",
-  "video_bytes": 593434
+  "video_bytes": 349928
 }
