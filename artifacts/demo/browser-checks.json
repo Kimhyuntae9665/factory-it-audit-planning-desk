@@ -1,0 +1,27 @@
+{
+  "browser": "Google Chrome headless via installed Playwright",
+  "source": "actual loopback 127.0.0.1 UI and frozen synthetic fixture",
+  "no_model_calls": true,
+  "checks": [
+    "early cutoff: v1 policy, 4 rows, 3 requests, no future R2",
+    "keyboard source dialog: exact v1 source and focus return",
+    "review/export: exact current receipt and unassessed result",
+    "later cutoff: R2 selected, 2 requests, prior review absent",
+    "return to early cutoff: no future R2; scoped receipt restored",
+    "viewer cannot submit review",
+    "390px mobile matrix/source: no document overflow"
+  ],
+  "screenshots": [
+    "01-desktop-august-matrix.png",
+    "02-policy-source-drawer.png",
+    "03-backup-not-restore.png",
+    "04-reviewed-plan-history.png",
+    "05-later-revision-stale-review.png",
+    "06-return-early-history.png",
+    "07-readonly-role.png",
+    "08-mobile-390-matrix.png",
+    "09-mobile-source.png"
+  ],
+  "video": "workflow.mp4",
+  "video_bytes": 593434
+}

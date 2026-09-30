@@ -1,0 +1,3 @@
+# Architecture image provenance
+
+The source SVG is original vector art made for this repository. Its five cards match the implemented flow: fictional JSON fixture records, Python deterministic selector/API, native HTML view, human planning review, and local JSON export. Icons are simple original geometric pictograms; they are not borrowed product logos. No n8n, vector database or LLM is drawn because none runs here. The dark dotted canvas, rounded light cards and short captions follow the approved portfolio style. `architecture.png` is rendered from `architecture.svg` with the already installed librsvg converter. The mobile-sized PNG was inspected for label readability. The diagram expresses data and review flow, not an external integration.
