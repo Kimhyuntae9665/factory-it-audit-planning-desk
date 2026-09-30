@@ -136,6 +136,10 @@ def capture():
             phone.screenshot(path=str(OUT / "08-mobile-390-matrix.png"), full_page=True)
             phone.get_by_role("button", name="EV-INVENTORY-AUG-R1").click()
             phone.locator("#sourceDialog[open]").wait_for()
+            phone.wait_for_function("""() => {
+              const body = document.querySelector('#sourceText')?.textContent || '';
+              return body.includes('EV-INVENTORY-AUG-R1') && body.includes('source_hash');
+            }""")
             phone.screenshot(path=str(OUT / "09-mobile-source.png"))
             checks.append("390px mobile matrix/source: no document overflow")
             mobile.close()

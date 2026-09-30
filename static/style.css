@@ -183,6 +183,7 @@ td::before {
   background: white;
   color: #142635;
 }
+.dialog-head button { white-space: nowrap; flex-shrink: 0; }
 dialog {
   width: min(790px, calc(100vw - 32px));
   max-height: 86vh;

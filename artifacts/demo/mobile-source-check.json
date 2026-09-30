@@ -1,0 +1,9 @@
+{
+  "capture": "actual live Chrome 390px source dialog after body loaded",
+  "doc_id": "EV-INVENTORY-AUG-R1",
+  "source_hash": "5b3533b5b2001c9a94aa2e5b08c28af65fb0d5270dde455a152fa5cbfaa95840",
+  "exact_body_match": true,
+  "screen_width": 390,
+  "screenshot": "09-mobile-source.png",
+  "screenshot_sha256": "ae40fc454fa1618ec708db5c129c777dcfbbca9aeb908dbe16d3a3bd3ac944c8"
+}

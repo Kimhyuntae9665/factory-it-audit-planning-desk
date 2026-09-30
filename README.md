@@ -35,7 +35,7 @@ The approved ACCESS-01 v2 starts **1 September** and draft v3 does not govern Au
 
 ## 실제 실행 화면
 
-아래 화면은 고정한 가상 자료로 loopback 앱을 실제 Chrome에서 실행해 캡처했습니다. 합성 성공 화면이나 보정 이미지는 아닙니다. [작동 영상](artifacts/demo/workflow.mp4)은 같은 브라우저 실행을 기록합니다. 캡처 검사와 파일 해시는 [증거 명세](artifacts/demo/provenance.json)에 있습니다. 현재 UI는 [P09 v2 개발 화면](https://github.com/Kimhyuntae9665/maintenance-job-plan-draft-review/blob/main/artifacts/media/v2-development-stored-desktop.png)의 색상·타이포·두 패널 구성을 기준으로 정리했습니다.
+아래 화면은 고정한 가상 자료로 loopback 앱을 실제 Chrome에서 실행해 캡처했습니다. 합성 성공 화면이나 보정 이미지는 아닙니다. [작동 영상](artifacts/demo/workflow.mp4)은 같은 브라우저 실행을 기록합니다. 모바일 원문 사진은 [ID·해시·본문 표시를 확인한 별도 재촬영](artifacts/demo/mobile-source-check.json)입니다. 캡처 검사와 파일 해시는 [증거 명세](artifacts/demo/provenance.json)에 있습니다. 현재 UI는 [P09 v2 개발 화면](https://github.com/Kimhyuntae9665/maintenance-job-plan-draft-review/blob/main/artifacts/media/v2-development-stored-desktop.png)의 색상·타이포·두 패널 구성을 기준으로 정리했습니다.
 
 | 업무 순서 | 실제 화면 |
 |---|---|

@@ -16,6 +16,15 @@
     "cutoff change clears unbound review draft",
     "role change preserves valid July/later filters and clears review draft"
   ],
+  "supplemental_mobile_source_check": {
+    "capture": "actual live Chrome 390px source dialog after body loaded",
+    "doc_id": "EV-INVENTORY-AUG-R1",
+    "source_hash": "5b3533b5b2001c9a94aa2e5b08c28af65fb0d5270dde455a152fa5cbfaa95840",
+    "exact_body_match": true,
+    "screen_width": 390,
+    "screenshot": "09-mobile-source.png",
+    "screenshot_sha256": "ae40fc454fa1618ec708db5c129c777dcfbbca9aeb908dbe16d3a3bd3ac944c8"
+  },
   "media": [
     {
       "path": "artifacts/demo/01-desktop-august-matrix.png",
@@ -59,8 +68,8 @@
     },
     {
       "path": "artifacts/demo/09-mobile-source.png",
-      "size_bytes": 45426,
-      "sha256": "5c96594bb0b01794e7efc674a0529cd458394b2d91ac62961ce99fea554c5fcd"
+      "size_bytes": 53909,
+      "sha256": "ae40fc454fa1618ec708db5c129c777dcfbbca9aeb908dbe16d3a3bd3ac944c8"
     },
     {
       "path": "artifacts/demo/10-july-period.png",

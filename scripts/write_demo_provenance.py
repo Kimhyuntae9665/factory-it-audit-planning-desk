@@ -14,6 +14,9 @@ receipt = {
     "model_calls": 0,
     "browser_check_count": len(checks["checks"]),
     "browser_checks": checks["checks"],
+    "supplemental_mobile_source_check": json.loads(
+        (demo / "mobile-source-check.json").read_text())
+        if (demo / "mobile-source-check.json").exists() else None,
     "media": [
         {"path": str(path.relative_to(root)).replace("\\", "/"),
          "size_bytes": path.stat().st_size,
