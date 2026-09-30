@@ -1,0 +1,149 @@
+[
+  {
+    "available_at": "2026-09-02T00:00:00Z",
+    "completeness": "declared_complete",
+    "control_hint": "ACCESS-01",
+    "doc_id": "EV-ACCESS-AUG-R1",
+    "event_date": "2026-08-29",
+    "evidence_type": "privileged_review",
+    "fields": {
+      "account_list_version": "AL-0829",
+      "review_date": "2026-08-29",
+      "reviewer_role": "IAM reviewer"
+    },
+    "logical_id": "ACCESS-2026-08",
+    "revision": 1,
+    "service": "MES-REPORT-A",
+    "site": "PLANT-A",
+    "source_hash": "682fcba218a50eaf48bb6abedcab96c8b8a727886d1b9ca1b6ec1d4ca942a653",
+    "text": "2026-08-29 특권 계정 월간 검토 기록. 검토자 역할: IAM reviewer. 검토일: 2026-08-29. 계정 목록 판본: AL-0829."
+  },
+  {
+    "available_at": "2026-08-02T00:00:00Z",
+    "completeness": "declared_complete",
+    "control_hint": "ACCESS-01",
+    "doc_id": "EV-ACCESS-JUL-R1",
+    "event_date": "2026-07-31",
+    "evidence_type": "privileged_review",
+    "fields": {
+      "account_list_version": "AL-0731",
+      "review_date": "2026-07-31",
+      "reviewer_role": "IAM reviewer"
+    },
+    "logical_id": "ACCESS-2026-07",
+    "revision": 1,
+    "service": "MES-REPORT-A",
+    "site": "PLANT-A",
+    "source_hash": "3d8d15bfc3961364f2ecffed646ae6103239a3440811863dcd1a399da9690750",
+    "text": "2026-07-31 특권 계정 검토 기록. 계정 목록 판본 AL-0731. 8월 자료가 아니다."
+  },
+  {
+    "available_at": "2026-09-02T00:00:00Z",
+    "completeness": "summary_only",
+    "control_hint": "RESTORE-01",
+    "doc_id": "EV-BACKUP-AUG-R1",
+    "event_date": "2026-08-31",
+    "evidence_type": "backup_completion",
+    "fields": {
+      "completion_status": "daily jobs completed",
+      "summary_period": "2026-08"
+    },
+    "logical_id": "BACKUP-2026-08",
+    "revision": 1,
+    "service": "MES-REPORT-A",
+    "site": "PLANT-A",
+    "source_hash": "6fe8dca898ff6f5aabff44a3fd35055e64665137b39f8cdabbe5e2c1516c9a77",
+    "text": "2026-08 일일 백업 작업 완료 요약. 복원 연습 또는 복원 결과는 기록하지 않는다."
+  },
+  {
+    "available_at": "2026-08-12T00:00:00Z",
+    "completeness": "planned_only",
+    "control_hint": "CHANGE-01",
+    "doc_id": "EV-CHANGE-AUG-R1",
+    "event_date": "2026-08-12",
+    "evidence_type": "change_plan",
+    "fields": {
+      "approval_record": null,
+      "change_request_id": "CHG-DEMO-0812",
+      "implementation_record": null,
+      "plan_state": "planned"
+    },
+    "logical_id": "CHANGE-0812",
+    "revision": 1,
+    "service": "MES-REPORT-A",
+    "site": "PLANT-A",
+    "source_hash": "e46243c325a6f781c0165c34a6a5ebe2aebea86584e6e2c5961c99e9a9de087e",
+    "text": "CHG-DEMO-0812는 2026-08-12 서비스 변경 계획 항목이다. 승인 기록과 구현 완료 기록은 이 자료에 없다."
+  },
+  {
+    "available_at": "2026-09-03T00:00:00Z",
+    "completeness": "partial",
+    "control_hint": "INVENTORY-01",
+    "doc_id": "EV-INVENTORY-AUG-R1",
+    "event_date": "2026-08-31",
+    "evidence_type": "component_export",
+    "fields": {
+      "completeness_declaration": "partial",
+      "components": [
+        "REPORT-API",
+        "QUEUE-BRIDGE",
+        "EXPORT-WORKER"
+      ],
+      "export_date": "2026-08-31",
+      "scope_declaration": "partial service view"
+    },
+    "logical_id": "INV-2026-08",
+    "revision": 1,
+    "service": "MES-REPORT-A",
+    "site": "PLANT-A",
+    "source_hash": "5b3533b5b2001c9a94aa2e5b08c28af65fb0d5270dde455a152fa5cbfaa95840",
+    "text": "2026-08-31 구성요소 부분 목록: REPORT-API, QUEUE-BRIDGE, EXPORT-WORKER. 대상 범위와 완전성은 partial로 선언됐다."
+  },
+  {
+    "available_at": "2026-09-11T00:00:00Z",
+    "completeness": "declared_full",
+    "control_hint": "INVENTORY-01",
+    "doc_id": "EV-INVENTORY-AUG-R2",
+    "event_date": "2026-08-31",
+    "evidence_type": "component_export",
+    "fields": {
+      "completeness_declaration": "declared_full",
+      "components": [
+        "REPORT-API",
+        "QUEUE-BRIDGE",
+        "EXPORT-WORKER",
+        "DB-REPLICA",
+        "AUTH-ADAPTER",
+        "SCHEDULER",
+        "ARCHIVE-STORE"
+      ],
+      "export_date": "2026-08-31",
+      "scope_declaration": "MES-REPORT-A full component scope"
+    },
+    "logical_id": "INV-2026-08",
+    "revision": 2,
+    "service": "MES-REPORT-A",
+    "site": "PLANT-A",
+    "source_hash": "8ce5c8b7ac7d0b366a627478d17b7c5e08bb0154ab81dbed4936286f2278a32e",
+    "text": "2026-09-11 접수된 2026-08-31 구성요소 목록 수정판. MES-REPORT-A 대상 범위 전체 7개 구성요소를 선언한다. 이 선언은 운영상 완전성 검증 결과가 아니다."
+  },
+  {
+    "available_at": "2026-09-02T00:00:00Z",
+    "completeness": "declared_complete",
+    "control_hint": "ACCESS-01",
+    "doc_id": "EV-ACCESS-B-AUG-R1",
+    "event_date": "2026-08-29",
+    "evidence_type": "privileged_review",
+    "fields": {
+      "account_list_version": "B-AL-0829",
+      "review_date": "2026-08-29",
+      "reviewer_role": "B reviewer"
+    },
+    "logical_id": "ACCESS-B-2026-08",
+    "revision": 1,
+    "service": "MES-REPORT-B",
+    "site": "PLANT-B",
+    "source_hash": "0c0bfdc2071d20ce188220ba8c94b29c2c0f8acbfbf63ad05f937b2ce8744cbe",
+    "text": "PLANT-B 전용 모의 계정검토 기록."
+  }
+]

@@ -1,0 +1,141 @@
+[
+  {
+    "available_at": "2026-01-01T00:00:00Z",
+    "cadence": "monthly",
+    "clause": "특권 계정은 매월 검토하고 검토자 역할, 검토일, 계정 목록 판본을 남긴다.",
+    "control_id": "ACCESS-01",
+    "doc_id": "POL-ACCESS-01-V1",
+    "effective_from": "2026-01-01",
+    "effective_until": "2026-09-01",
+    "required_evidence_type": "privileged_review",
+    "required_fields": [
+      "reviewer_role",
+      "review_date",
+      "account_list_version"
+    ],
+    "revision": "v1",
+    "service": "MES-REPORT-A",
+    "site": "PLANT-A",
+    "source_hash": "e16e8fd7875f6d3dc5a85c55324689b2ee7d373d65984ec07b378b7ffc03c5c6",
+    "status": "approved"
+  },
+  {
+    "available_at": "2026-08-25T00:00:00Z",
+    "cadence": "weekly",
+    "clause": "특권 계정은 매주 검토하고 검토자 역할, 검토일, 계정 목록 판본을 남긴다.",
+    "control_id": "ACCESS-01",
+    "doc_id": "POL-ACCESS-01-V2",
+    "effective_from": "2026-09-01",
+    "effective_until": null,
+    "required_evidence_type": "privileged_review",
+    "required_fields": [
+      "reviewer_role",
+      "review_date",
+      "account_list_version"
+    ],
+    "revision": "v2",
+    "service": "MES-REPORT-A",
+    "site": "PLANT-A",
+    "source_hash": "764ac152cd91a5b3b42d6d2cd182cc08c87848937816bba9ccf79d155308d215",
+    "status": "approved"
+  },
+  {
+    "available_at": "2026-08-30T00:00:00Z",
+    "cadence": "daily",
+    "clause": "초안: 특권 계정 일일 검토를 제안한다. 승인된 정책이 아니다.",
+    "control_id": "ACCESS-01",
+    "doc_id": "POL-ACCESS-01-V3-DRAFT",
+    "effective_from": "2026-08-01",
+    "effective_until": null,
+    "required_evidence_type": "privileged_review",
+    "required_fields": [
+      "reviewer_role",
+      "review_date",
+      "account_list_version"
+    ],
+    "revision": "v3",
+    "service": "MES-REPORT-A",
+    "site": "PLANT-A",
+    "source_hash": "7dd9032b399e944138526fb5bbaddbf4e2a58130bd037cd037e4011331f3f161",
+    "status": "draft"
+  },
+  {
+    "available_at": "2026-01-01T00:00:00Z",
+    "cadence": "monthly",
+    "clause": "복원 연습을 매월 수행하고 연습일과 문서화된 결과를 남긴다. 백업 완료 요약은 복원 연습 결과가 아니다.",
+    "control_id": "RESTORE-01",
+    "doc_id": "POL-RESTORE-01-V1",
+    "effective_from": "2026-01-01",
+    "effective_until": null,
+    "required_evidence_type": "restore_exercise",
+    "required_fields": [
+      "exercise_date",
+      "documented_result"
+    ],
+    "revision": "v1",
+    "service": "MES-REPORT-A",
+    "site": "PLANT-A",
+    "source_hash": "b3148a287d9976e009415a4e1562688686f6a0d0b293f0c38ff1c411a5118331",
+    "status": "approved"
+  },
+  {
+    "available_at": "2026-01-01T00:00:00Z",
+    "cadence": "sampled_changes",
+    "clause": "표본 서비스 변경에는 변경 요청, 승인, 구현 증거를 연결한다. 계획 항목만으로 구현을 확인하지 않는다.",
+    "control_id": "CHANGE-01",
+    "doc_id": "POL-CHANGE-01-V1",
+    "effective_from": "2026-01-01",
+    "effective_until": null,
+    "required_evidence_type": "implemented_change",
+    "required_fields": [
+      "change_request_id",
+      "approval_record",
+      "implementation_record"
+    ],
+    "revision": "v1",
+    "service": "MES-REPORT-A",
+    "site": "PLANT-A",
+    "source_hash": "ff66a692630e0de82dd7f83f7efa487429f445dfada637d1bcf0edb5863cac6a",
+    "status": "approved"
+  },
+  {
+    "available_at": "2026-01-01T00:00:00Z",
+    "cadence": "monthly",
+    "clause": "매월 서비스 구성요소 목록을 내보내고 대상 범위 및 완전성 선언을 함께 남긴다.",
+    "control_id": "INVENTORY-01",
+    "doc_id": "POL-INVENTORY-01-V1",
+    "effective_from": "2026-01-01",
+    "effective_until": null,
+    "required_evidence_type": "component_export",
+    "required_fields": [
+      "export_date",
+      "scope_declaration",
+      "completeness_declaration"
+    ],
+    "revision": "v1",
+    "service": "MES-REPORT-A",
+    "site": "PLANT-A",
+    "source_hash": "60b38e57800c86174591d8243f96c7b1aed86e743f294cff1167b642461c0dac",
+    "status": "approved"
+  },
+  {
+    "available_at": "2026-01-01T00:00:00Z",
+    "cadence": "monthly",
+    "clause": "PLANT-B 모의 특권계정 월간 검토 정책.",
+    "control_id": "ACCESS-01",
+    "doc_id": "POL-B-ACCESS-01-V1",
+    "effective_from": "2026-01-01",
+    "effective_until": null,
+    "required_evidence_type": "privileged_review",
+    "required_fields": [
+      "reviewer_role",
+      "review_date",
+      "account_list_version"
+    ],
+    "revision": "v1",
+    "service": "MES-REPORT-B",
+    "site": "PLANT-B",
+    "source_hash": "357c63d2ec623e266e8e58651afda91a33a5cd4c0e9bf085abec016f14a1e837",
+    "status": "approved"
+  }
+]

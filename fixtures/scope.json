@@ -1,0 +1,27 @@
+{
+  "actors": {
+    "planner_a": {
+      "can_review": true,
+      "site": "PLANT-A"
+    },
+    "planner_b": {
+      "can_review": true,
+      "site": "PLANT-B"
+    },
+    "viewer_a": {
+      "can_review": false,
+      "site": "PLANT-A"
+    }
+  },
+  "all_assessment_results": "unassessed",
+  "business_user": "factory-IT audit planner",
+  "fixture_id": "AUDIT-PLAN-FICTIONAL-v1",
+  "identity_mode": "public demo actors, not SSO",
+  "later_cutoff": "2026-09-12T09:00:00Z",
+  "period_end_exclusive": "2026-09-01",
+  "period_start": "2026-08-01",
+  "planning_cutoff": "2026-09-10T09:00:00Z",
+  "review_result": "reviewed planning matrix only",
+  "service": "MES-REPORT-A",
+  "site": "PLANT-A"
+}

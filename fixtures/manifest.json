@@ -1,0 +1,19 @@
+{
+  "fixture_id": "AUDIT-PLAN-FICTIONAL-v1",
+  "license": "MIT original synthetic examples",
+  "runtime_input": [
+    "scope.json",
+    "policies.json",
+    "evidence.json"
+  ],
+  "sha256": {
+    "evidence.json": "cf994d42cd69351e2537c398815454b1a4e6c1d03b71b992015889c94b3e90d9",
+    "expected-test-only.json": "c5037bd040d7e7df6edccaa85fe0e963df9d3b17f259497601e4e81b2f2fc23d",
+    "policies.json": "24344581fcb61339f517fe467ec22752b1c1fc80688e1e2777d43ef517fb72bb",
+    "scope.json": "7a74de205f08e8a0c567e66116315e4329f2bfa6569814cdd93b36c425ebc2c7"
+  },
+  "synthetic": true,
+  "test_only": [
+    "expected-test-only.json"
+  ]
+}

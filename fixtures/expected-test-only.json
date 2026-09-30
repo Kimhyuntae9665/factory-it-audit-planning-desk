@@ -1,0 +1,41 @@
+{
+  "later": {
+    "inventory_active": "EV-INVENTORY-AUG-R2",
+    "old_inventory_superseded": "EV-INVENTORY-AUG-R1",
+    "receipt_stale": true,
+    "request_control_ids": [
+      "RESTORE-01",
+      "CHANGE-01"
+    ]
+  },
+  "primary": {
+    "all_assessment_results": "unassessed",
+    "applicable_policy_ids": [
+      "POL-ACCESS-01-V1",
+      "POL-RESTORE-01-V1",
+      "POL-CHANGE-01-V1",
+      "POL-INVENTORY-01-V1"
+    ],
+    "matched_evidence_ids": [
+      "EV-ACCESS-AUG-R1"
+    ],
+    "mismatch_ids": [
+      "EV-ACCESS-JUL-R1",
+      "EV-BACKUP-AUG-R1",
+      "EV-CHANGE-AUG-R1",
+      "EV-INVENTORY-AUG-R1"
+    ],
+    "request_control_ids": [
+      "RESTORE-01",
+      "CHANGE-01",
+      "INVENTORY-01"
+    ],
+    "restricted_ids": [
+      "POL-B-ACCESS-01-V1",
+      "EV-ACCESS-B-AUG-R1"
+    ],
+    "unavailable_at_cutoff": [
+      "EV-INVENTORY-AUG-R2"
+    ]
+  }
+}
