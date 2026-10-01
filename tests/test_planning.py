@@ -7,7 +7,7 @@ from pathlib import Path
 from audit_desk.core import Desk, PlanningError, sha
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED = json.loads((ROOT / "fixtures/expected-test-only.json").read_text())
+EXPECTED = json.loads((ROOT / "fixtures/expected-test-only.json").read_text(encoding="utf-8"))
 EARLY = "2026-09-10T09:00:00Z"
 LATE = "2026-09-12T09:00:00Z"
 

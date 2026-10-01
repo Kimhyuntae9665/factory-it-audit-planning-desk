@@ -43,15 +43,15 @@ class PlanningError(Exception):
 class Desk:
     def __init__(self, fixture_root=FIX):
         fixture_root = Path(fixture_root)
-        manifest = json.loads((fixture_root / "manifest.json").read_text())
+        manifest = json.loads((fixture_root / "manifest.json").read_text(encoding="utf-8"))
         expected = manifest["sha256"]
         for name in manifest["runtime_input"]:
             actual = hashlib.sha256((fixture_root / name).read_bytes()).hexdigest()
             if actual != expected[name]:
                 raise PlanningError("fixture_hash_changed", 500)
-        self.scope = json.loads((fixture_root / "scope.json").read_text())
-        self.policies = json.loads((fixture_root / "policies.json").read_text())
-        self.evidence = json.loads((fixture_root / "evidence.json").read_text())
+        self.scope = json.loads((fixture_root / "scope.json").read_text(encoding="utf-8"))
+        self.policies = json.loads((fixture_root / "policies.json").read_text(encoding="utf-8"))
+        self.evidence = json.loads((fixture_root / "evidence.json").read_text(encoding="utf-8"))
         for row in self.policies + self.evidence:
             original = {k: v for k, v in row.items() if k != "source_hash"}
             if sha(original) != row["source_hash"]:

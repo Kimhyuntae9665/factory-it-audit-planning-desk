@@ -87,3 +87,7 @@ Potential extensions require a separate contract: authenticated roles, durable a
 - [Grupo Bimbo audit planning case study, Microsoft Learn](https://learn.microsoft.com/en-us/power-platform/guidance/case-studies/grupo-bimbo-global-audit)
 - The fictional documents and code in this repository are original, released under the [MIT License](LICENSE). The named customer sources are linked as references and their content is not copied into fixtures.
 - Diagram source and rendering notes: [architecture.svg](assets/architecture.svg), [diagram-provenance.md](assets/diagram-provenance.md).
+
+## Windows CPU startup
+
+`.gitattributes` keeps hashed source files in LF form even when Git uses `core.autocrlf=true`; do not rewrite fixture bytes or regenerate source manifests to bypass an integrity failure. From a fresh clone, run `python -X utf8=0 scripts/check_startup.py` for a model-free startup/integrity check. The same check runs on Windows CI.
